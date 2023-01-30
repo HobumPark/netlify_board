@@ -40,12 +40,6 @@ class PostMain extends Component {
 
      _getBoarList = async() => {
     //alert("요청!")
-
-    const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
-    
-    console.log('PROXY')
-    console.log(PROXY)
-
     console.log('요청!')
     const res = await axios.get(`/board`);
     console.log(res);
