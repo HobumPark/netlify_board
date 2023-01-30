@@ -84,7 +84,7 @@ class App extends Component {
     return (
     <div className="App">
     <BrowserRouter>
-       <button onClick={this._getBoardList}>테스트</button>
+       <button onClick={this._getBoarList}>테스트</button>
        <Routes>
           <Route path='/postWrite' element={<PostWrite enrollPost={this.enrollPost}></PostWrite>} />
           <Route path='/postWrite_quill' element={<PostWriteQuill></PostWriteQuill>} />
