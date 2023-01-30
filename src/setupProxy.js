@@ -1,6 +1,6 @@
-import { createProxyMiddleware } from 'http-proxy-middleware';
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-export default (app) => {
+module.exports = (app) => {
 	app.use(
 		createProxyMiddleware('/board', {
 			target: 'http://mynodetest.cafe24app.com', 
