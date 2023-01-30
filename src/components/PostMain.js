@@ -91,12 +91,6 @@ class PostMain extends Component {
     this._getBoarList();
   }
 
-
-  _getBoarListTest=async()=>{
-    const res = await axios.get('http://mynodetest.cafe24app.com/board');
-    console.log(res)
-  }
-
     render(){
         
     const{posts,postsPerPage,currentPage,
@@ -104,7 +98,7 @@ class PostMain extends Component {
 
         return(
         <div id="post-main">  
-            <button onClick={this._getBoarListTest}>테스트</button>
+            <button onClick={this._getBoarList}>테스트</button>
             <PostMainHeader/>
             <InputComp posts={posts} currentPage={currentPage} postsPerPage={postsPerPage}
             setBoardListBySearch={this.setBoardListBySearch}/>
