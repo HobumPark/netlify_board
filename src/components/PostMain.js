@@ -95,6 +95,7 @@ class PostMain extends Component {
 
         return(
         <div id="post-main">  
+            <button onClick={this._getBoarList}>테스트</button>
             <PostMainHeader/>
             <InputComp posts={posts} currentPage={currentPage} postsPerPage={postsPerPage}
             setBoardListBySearch={this.setBoardListBySearch}/>
