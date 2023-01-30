@@ -47,7 +47,7 @@ class PostMain extends Component {
     console.log(PROXY)
 
     console.log('요청!')
-    const res = await axios.get(`${PROXY}/board`);
+    const res = await axios.get(`/board`);
     console.log(res);
     console.log(res.data.board_data);
     var boardList=res.data.board_data
