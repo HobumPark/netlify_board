@@ -53,12 +53,38 @@ class App extends Component {
     console.log('추가결과',res)
   }
 
+  _getBoarList = async() => {
+    //alert("요청!")
+    console.log('요청!')
+    axios.defaults.headers.get['Content-Type'] ='application/json;charset=utf-8';
+    axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+    axios.defaults.headers.get['widthCredentials'] = true
+    const res = await axios.get(`/board`);
+    console.log(res);
+    console.log(res.data.board_data);
+    var boardList=res.data.board_data
+    var date;
+    var fullDate='';
+    for(var i=0; i<boardList.length; i++){
+      console.log(boardList[i].regDate)
+      date=new Date(boardList[i].regDate)
+      fullDate
+      =this.transDate(date)
+      boardList[i].regDate=fullDate
+    }
+
+    this.setState({
+      posts:boardList
+    })
+  }
+
   render(){
     const {posts}=this.state;
 
     return (
     <div className="App">
     <BrowserRouter>
+       <button onClick={this._getBoardList}>테스트</button>
        <Routes>
           <Route path='/postWrite' element={<PostWrite enrollPost={this.enrollPost}></PostWrite>} />
           <Route path='/postWrite_quill' element={<PostWriteQuill></PostWriteQuill>} />
