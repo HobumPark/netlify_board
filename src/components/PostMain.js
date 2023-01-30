@@ -41,6 +41,9 @@ class PostMain extends Component {
      _getBoarList = async() => {
     //alert("요청!")
     console.log('요청!')
+    axios.defaults.headers.get['Content-Type'] ='application/json;charset=utf-8';
+    axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+    axios.defaults.headers.get['widthCredentials'] = true
     const res = await axios.get(`/board`);
     console.log(res);
     console.log(res.data.board_data);
