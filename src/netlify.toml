@@ -6,6 +6,6 @@
 
 [[redirects]]
   from = "/board/*"
-  to = "http://mynodetest.cafe24app.com/board/*"
+  to = "http://mynodetest.cafe24app.com/board/:splat"
   status = 200
   force = true
