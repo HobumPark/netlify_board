@@ -39,7 +39,8 @@ class PostMain extends Component {
   }
 
      _getBoarList = async() => {
-    alert("요청!")
+    //alert("요청!")
+    console.log('요청!')
     const res = await axios.get('/board');
     console.log(res);
     console.log(res.data.board_data);
