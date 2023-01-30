@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/proxy/*"
+  from = "/*"
   to = "http://mynodetest.cafe24app.com/:splat"
   status = 200
   force = true
