@@ -1,11 +1,11 @@
 [[redirects]]
-  from = "/board"
+  from = "/proxy"
   to = "http://mynodetest.cafe24app.com/board"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/board/*"
+  from = "/proxy/*"
   to = "http://mynodetest.cafe24app.com/board/:splat"
   status = 200
   force = true
