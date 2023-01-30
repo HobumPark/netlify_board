@@ -20,7 +20,7 @@ class PageNation extends Component {
     }
 
     pageClick=(page)=>{
-        alert("pageClick:"+page);
+        //alert("pageClick:"+page);
         this.props.setCurrentPage(page);
         var allPage=document.getElementsByClassName("page")
         for(var i=0; i<allPage.length; i++){
@@ -35,11 +35,11 @@ class PageNation extends Component {
     }
 
     prevFunc=()=>{
-        alert("prevFunc");
+        //alert("prevFunc");
         const {currentPage}=this.props;
 
         if(currentPage-1 < 1){
-            alert("범위를 벗어날수 없습니다!");
+            //alert("범위를 벗어날수 없습니다!");
             return;
         }
 
@@ -53,14 +53,14 @@ class PageNation extends Component {
     }
 
     nextFunc=()=>{
-        alert("nextFunc");
+        //alert("nextFunc");
         const {currentPage,totalPosts,postsPerPage}=this.props;
         const totalPage=Math.ceil(totalPosts / postsPerPage);
-        alert("현재 페이지:"+currentPage)
-        alert("총 페이지:"+totalPage)
+        //alert("현재 페이지:"+currentPage)
+        //alert("총 페이지:"+totalPage)
         
         if(currentPage+1 > totalPage){
-            alert("범위를 벗어날수 없습니다!");
+            //alert("범위를 벗어날수 없습니다!");
             return;
         }
 
@@ -74,7 +74,7 @@ class PageNation extends Component {
     }
 
     firstPage=()=>{
-        alert("첫째 페이지로")
+        //alert("첫째 페이지로")
         const {firstPage}=this.props;
         this.setState({
             currentPage:firstPage
@@ -84,7 +84,7 @@ class PageNation extends Component {
         })
     }
     lastPage=()=>{
-        alert("마지막 페이지로")
+        //alert("마지막 페이지로")
         const {lastPage}=this.props;
         this.setState({
             currentPage:lastPage
@@ -102,7 +102,7 @@ class PageNation extends Component {
     }
 
     changeActivePageNo=(currentPage)=>{
-        alert("활성화된 페이지 번호 변경")
+        //alert("활성화된 페이지 번호 변경")
 
         //전부 비활성화 후
         var disableAllPage=document.getElementsByClassName("page")

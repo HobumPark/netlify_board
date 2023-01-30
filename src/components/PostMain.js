@@ -24,7 +24,7 @@ class PostMain extends Component {
   }
 
   setCurrentPage=(page)=>{
-    alert("setCurrentPage:"+page);
+    //alert("setCurrentPage:"+page);
     this.setState({
       currentPage:page
     })
